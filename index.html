@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>digital mind</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <nav class="block">
+            <div class="accordion" onclick="accordion(this);">
+                <div class="accordion_header">woman</div>
+                <div class="accordion_links">
+                    <a href="#">Jackets</a>
+                    <a href="#">Blazers</a>
+                    <a href="#">Suits</a>
+                    <a href="#">Trousers</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Shirts</a>
+                </div>
+            </div>
+            <div class="accordion active" onclick="accordion(this);">
+                <div class="accordion_header">man</div>
+                <div class="accordion_links">
+                    <a href="#">Jackets</a>
+                    <a href="#">Blazers</a>
+                    <a href="#">Suits</a>
+                    <a href="#">Trousers</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Shirts</a>
+                </div>
+            </div>
+            <div class="accordion" onclick="accordion(this);">
+                <div class="accordion_header">kids</div>
+                <div class="accordion_links">
+                    <a href="#">Jackets</a>
+                    <a href="#">Blazers</a>
+                    <a href="#">Suits</a>
+                    <a href="#">Trousers</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Shirts</a>
+                </div>
+            </div>
+            <div class="accordion" onclick="accordion(this);">
+                <div class="accordion_header">shoes&bags</div>
+                <div class="accordion_links">
+                    <a href="#">Jackets</a>
+                    <a href="#">Blazers</a>
+                    <a href="#">Suits</a>
+                    <a href="#">Trousers</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Shirts</a>
+                </div>
+            </div>
+        </nav>
+        <div class="block">
+            <h2>colors</h2>
+            <div class="circles">
+                <input type="button" class="color_1">
+                <input type="button" class="color_2">
+                <input type="button" class="color_3">
+                <input type="button" class="color_4">
+                <input type="button" class="color_5">
+                <input type="button" class="color_6">
+                <input type="button" class="color_7">
+                <input type="button" class="color_8">
+                <input type="button" class="color_9">
+                <input type="button" class="color_10">
+            </div>
+        </div>
+        <div class="block">
+            <h2>size</h2>
+            <div class="circles size">
+                <input type="button" value="xs" onclick="selected(this)">
+                <input type="button" class="active" value="s" onclick="selected(this)">
+                <input type="button" value="m" onclick="selected(this)">
+                <input type="button" value="l" onclick="selected(this)">
+                <input type="button" value="xl" onclick="selected(this)">
+            </div>
+        </div>
+        <div class="block">
+            <h2>price range</h2>
+            <div class="range">
+                <div class="space">
+                    <div class="line back"></div>
+                    <div class="line front"></div>
+                    <div class="float left" onclick="range(this)"></div>
+                    <div class="float right" onclick="range(this)"></div>
+                </div>
+                <div class="view">
+                    <div class="number min">190</div>
+                    <div class="number max">728</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="products">
+            <div class="block"><img src="img/product_1.png" alt="">
+                <h3>Our Legacy Splash<br>Jacquard Knit</h3>
+                <h4>Black Grey Plants</h4>
+                <div class="price">290</div>
+            </div>
+            <div class="block"><img src="img/product_2.png" alt="">
+                <h3>Our Legacy Splash<br>50s Sweater</h3>
+                <h4>Grey Melange</h4>
+                <div class="price">160</div>
+            </div>
+            <div class="block"><img src="img/product_3.png" alt="">
+                <h3>Our Legacy Splash<br>First Shirt</h3>
+                <h4>Navy Crinkle</h4>
+                <div class="price">180</div>
+            </div>
+            <div class="block"><img src="img/product_4.png" alt="">
+                <h3>Our Legacy Splash<br>Mid Sleeve Tee</h3>
+                <h4>Black Grey Plants</h4>
+                <div class="price">90</div>
+            </div>
+            <div class="block"><img src="img/product_5.png" alt="">
+                <h3>Our Legacy 50s<br>Great Sweat</h3>
+                <h4>Super Light Print</h4>
+                <div class="price">120</div>
+            </div>
+            <div class="block"><img src="img/product_6.png" alt="">
+                <h3>Our Legacy Splash<br>Jacquard Knit</h3>
+                <h4>Black Grey Plants</h4>
+                <div class="price">320</div>
+            </div>
+            <div class="block"><img src="img/product_7.png" alt="">
+                <h3>Our Legacy Six<br>Shirt</h3>
+                <h4>Raster Grey</h4>
+                <div class="price">150</div>
+            </div>
+            <div class="block"><img src="img/product_8.png" alt="">
+                <h3>Our Legacy Bomber<br>Jacket II</h3>
+                <h4>Faded Olive Twill</h4>
+                <div class="price">570</div>
+            </div>
+            <div class="block"><img src="img/product_9.png" alt="">
+                <h3>Our Legacy 50s<br>Great Sweat</h3>
+                <h4>Black Grey Plants</h4>
+                <div class="price">190</div>
+            </div>
+        </div>
+        <div class="loader">
+            <input type="button" value="Load More" onclick="load_more()">
+        </div>
+    </div>
+</div>
+</body>
+</html>

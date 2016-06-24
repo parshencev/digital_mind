@@ -1,0 +1,31 @@
+//fonts------------------------------------------------------------------
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|PT+Serif:400,400italic&subset=latin,cyrillic);
+//colors-----------------------------------------------------------------
+@circles_colors:"1476f1","82d889","3c3d41","838d8f","b8c6c7","ce954a","7b7f91","777","bdbdbd","eee"; // Colors for circles
+@color_1:#EAEAEA; //color for: body,bottom-border(h2),background(size circle input)
+@color_2:#838d8f; //color for: active size circles,range front line and circles border,background active accardion,
+@color_3:#3c3d41; //color for: text size circles, accordion text
+@color_4:#fff;    //color for: text active size circles, range circles background, block background,
+@color_5:#3b3d40; //color for: text h2,
+@color_6:#daddde; //color for: accordions link text
+@color_7:#eee;    //color for: range back line background,
+@color_8:#b8c6c7; //color for: loader button background
+//prefixes---------------------------------------------------------------
+@all_pref:"","-webkit-","-o-","-moz-","-ms-"; //all prefixes
+@wm_pref:"","-webkit-","-moz-"; //prefixes for border-radius,box-sizing
+@wo_pref:"","-webkit-","-o-"; //prefixes for animation
+//duplicate class for colored circles------------------------------------
+.for(@colors:@circles_colors,@i:length(@colors))when(@i>0){
+  @ex:extract(@colors,@i);
+  .color_@{i}{
+    background: ~"#@{ex}";
+  }
+  .for(@colors,@i - 1);
+}
+//prefixes creator-------------------------------------------------------
+.pref(@name,@param,@pref:@all_pref,@i:length(@pref))when(@i > 0){
+  @ipref:extract(@pref,@i);
+  @iname:~"@{ipref}@{name}";
+    @{iname}:@param;
+  .pref(@name,@param,@pref,@i - 1);
+}
